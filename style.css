@@ -1,0 +1,41 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url(./Windows-XP-4K-modified.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login {
+    /* Rectangle 1 */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 10%;
+    margin:0;
+    background: rgba(205, 211, 255, 0.48);
+    border: hsla(233, 100%, 70%, 0.48) 2px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 3%;
+}
+#login img {
+    height:7rem;
+}
+#heading {
+    margin-bottom:1rem;
+}
+input {
+    border: rgba(255, 255, 255, 0.808) solid;
+    
+}
