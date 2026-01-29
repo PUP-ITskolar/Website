@@ -3,17 +3,28 @@
     margin: 0;
     padding: 0;
 }
-
-main {
-    background-image: url(./Windows-XP-4K-modified.jpg);
+body{
+    background-image: url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+main {
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: brightness(50%);
 }
+/* #login::before{
+    content: "";
+    position:fixed;
+    top: 0; bottom: 0; left:0; right:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+} */
 
 #login {
     /* Rectangle 1 */
@@ -21,9 +32,9 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 5% 10%;
+    padding: 5% 7%;
     margin:0;
-    background: rgba(205, 211, 255, 0.48);
+    background: rgba(205, 211, 255, 0.226);
     border: hsla(233, 100%, 70%, 0.48) 2px solid;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
