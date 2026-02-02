@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITSKOLAR Dash</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>ITskolar</title>
 </head>
-<body>
-    Welcome to Dashboard!
+
+<body onload="time()">
+    <main id="desktop">
+
+    </main>
+    <footer id="taskbar">
+        <div id="start">
+            <img src="./1_assets/information_bubble.png" style="width: 1.5rem;">
+            <p>start</p>
+        </div>
+        <div id="programs"></div>
+        <div id="status">
+            <p id="time"></p>
+        </div>
+    </footer>
+    <script src="time.js"></script>
 </body>
+
 </html>
