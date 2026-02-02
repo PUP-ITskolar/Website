@@ -1,0 +1,22 @@
+name: itskolar.bonnybonnybonaktan.xyz CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
+        working-directory: /srv/itskolar.bonnybonnybonaktan.xyz
+    steps:
+    - name: Pull Repo
+      run: git pull --recurse-submodules
+    - name: Stop itskolar.bonnybonnybonaktan.xyz
+      run: docker stop itskolar.bonnybonnybonaktan.xyz; docker rm itskolar.bonnybonnybonaktan.xyz
+    - name: Build Image
+      run: docker build -t itskolar.bonnybonnybonaktan.xyz:latest .
+    - name: Start Containers
+      run: docker run -p 7443:80 itskolar.bonnybonnybonaktan.xyz
