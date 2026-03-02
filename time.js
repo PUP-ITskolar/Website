@@ -14,7 +14,6 @@ function time() {
         let ss = "0" + s;
     }
 
-document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-
+    document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
 }
 setInterval(time, 1000);

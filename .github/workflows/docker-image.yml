@@ -1,4 +1,4 @@
-name: itskolar.bonnybonnybonaktan.xyz CI/CD
+name: ITskolarSystem-Homepage CI/CD
 
 on:
   push:
@@ -10,13 +10,11 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: /srv/itskolar.bonnybonnybonaktan.xyz
+        working-directory: /srv/ITskolar-System
     steps:
-    - name: Pull Repo
-      run: git pull --recurse-submodules
-    - name: Stop itskolar.bonnybonnybonaktan.xyz
-      run: docker stop itskolar.bonnybonnybonaktan.xyz; docker rm itskolar.bonnybonnybonaktan.xyz
-    - name: Build Image
-      run: docker build -t itskolar.bonnybonnybonaktan.xyz:latest .
-    - name: Start Containers
-      run: docker run --name itskolar.bonnybonnybonaktan.xyz -d -p 7443:80 itskolar.bonnybonnybonaktan.xyz
+    - name: Pull Repository
+      run: git submodule update --remote itskolarngbayan.xyz
+    - name: Build Container
+      run: docker compose build homepage-builder
+    - name: Start Containers and push to nginx
+      run: docker compose up -d homepage-builder
